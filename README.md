@@ -11,6 +11,9 @@ Using "git --mirror" to copy the repositories should also avoid inconsistencies 
 
 The idea is, that the whole thing is mirrorerd somewhere, where a real backup tool can read it.
 
+**I give no warranty that using this script won't destroy your installation. I do not guarantee for neither script**
+
+
 TODO
 ----
 
