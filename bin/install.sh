@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 BASE_DIR="$( cd "$(dirname $0)/.." && pwd )"
 TMP_DIR="${BASE_DIR}/tmp/"
