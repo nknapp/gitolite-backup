@@ -3,7 +3,8 @@
 BASE_DIR="$( cd "$(dirname $0)/.." && pwd )"
 TMP_DIR="${BASE_DIR}/tmp/"
 TMP_SSH_CONFIG="${BASE_DIR}/tmp/install_ssh_config"
-TMP_QUESTIONS="${BASE_DIR}/tmp/questions.sh"
+TMP_QUESTIONS_DIR="${BASE_DIR}/tmp"
+TMP_QUESTIONS="${TMP_QUESTIONS_DIR}/questions.sh"
 
 CONFIG_DIR="${BASE_DIR}/config"
 BACKUP_SSH="${CONFIG_DIR}/ssh"
@@ -28,6 +29,7 @@ if [ -f "${TMP_QUESTIONS}" ] ; then
 else
     echo "Please edit ${TMP_QUESTIONS}" and fill the values according to your installation.
     echo "Then, run this script again."
+    mkdir -p ${TMP_QUESTIONS_DIR}
     cat >${TMP_QUESTIONS} <<QUESTIONS
 # The hostname of the gitolite server
 GITOLITE_HOST=servername
